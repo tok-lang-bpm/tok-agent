@@ -1,0 +1,13 @@
+{
+  "name": "tok",
+  "version": "1.0.1",
+  "description": "The tok process language for agents: the skill tok-modelling and the tok MCP server (check, format, export to BPMN 2.0, SVG, DMN and forms, import, simulate, evaluate decisions)",
+  "author": {
+    "name": "Marek Deja",
+    "url": "https://github.com/tok-lang-bpm"
+  },
+  "homepage": "https://tok-lang-bpm.github.io/",
+  "repository": "https://github.com/tok-lang-bpm/tok-agent",
+  "license": "GPL-3.0-or-later",
+  "keywords": ["tok", "bpmn", "dmn", "process-modelling", "camunda", "mcp"]
+}

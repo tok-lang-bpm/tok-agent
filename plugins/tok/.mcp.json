@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tok": {
+      "command": "tok",
+      "args": ["mcp"]
+    }
+  }
+}

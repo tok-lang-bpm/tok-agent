@@ -1,0 +1,15 @@
+{
+  "name": "tok-lang-bpm",
+  "description": "tok, the text language for BPMN process models and DMN decisions: the modelling skill and the MCP server for AI agents",
+  "owner": {
+    "name": "tok-lang-bpm",
+    "url": "https://github.com/tok-lang-bpm"
+  },
+  "plugins": [
+    {
+      "name": "tok",
+      "source": "./plugins/tok",
+      "description": "Write, check and repair process models in tok and export them to BPMN 2.0, SVG, DMN and Camunda forms; simulate processes and evaluate decisions"
+    }
+  ]
+}
