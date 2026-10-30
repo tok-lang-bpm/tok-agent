@@ -1,6 +1,6 @@
 # tok for AI agents
 
-This repository gives AI agents the [tok](https://github.com/tok-lang-bpm/tok) process language: the skill **tok-modelling**, which teaches an agent to turn a process description into a checked tok model and to export it to BPMN 2.0, SVG, DMN and Camunda forms, and the configuration of the **tok MCP server**, whose tools check, format, export, import, simulate and evaluate models. The agent writes a short text; the tok engine checks it and produces the XML, so the agent never writes BPMN XML or diagram coordinates.
+This repository gives AI agents the [tok](https://github.com/tok-lang-bpm/tok) process language: the skill **tok-modelling**, which teaches an agent to turn a process description into a checked tok model and to export it to BPMN 2.0, SVG, DMN and Camunda forms, the skill **bpmn-modelling**, which teaches an agent to write BPMN 2.0 XML directly and to check, lay out and draw it with the tok engine, and the configuration of the **tok MCP server**, whose tools check tok models and BPMN XML files, format, export, import, simulate and evaluate models. The agent writes a short text; the tok engine checks it and produces the XML, so the agent never writes BPMN XML or diagram coordinates.
 
 The guide to the language and the tools: https://tok-lang-bpm.github.io/ (chapter *Working with AI agents*).
 
@@ -24,7 +24,7 @@ In Claude Code:
 /plugin install tok@tok-lang-bpm
 ```
 
-or from a shell: `claude plugin marketplace add tok-lang-bpm/tok-agent` and `claude plugin install tok@tok-lang-bpm`. The plugin starts the server with the command `tok mcp`; the skill is available as `tok:tok-modelling` and is used by the agent whenever a task involves `.tok` files, process descriptions or BPMN and DMN models.
+or from a shell: `claude plugin marketplace add tok-lang-bpm/tok-agent` and `claude plugin install tok@tok-lang-bpm`. The plugin starts the server with the command `tok mcp`; the skills are available as `tok:tok-modelling` (used whenever a task involves `.tok` files, process descriptions or BPMN and DMN models in tok) and `tok:bpmn-modelling` (when the task asks for BPMN 2.0 XML itself).
 
 ## 3. Other agents and editors
 
@@ -61,7 +61,7 @@ A clean check means the model follows the rules of BPMN and of tok; it does not 
 
 ## Versions and issues
 
-The plugin follows the version of tok (`plugins/tok/.claude-plugin/plugin.json`); the skill is maintained in the tok repository (`skills/tok-modelling`) and copied here with `tools/sync.sh`. Report problems in https://github.com/tok-lang-bpm/tok/issues.
+The plugin follows the version of tok (`plugins/tok/.claude-plugin/plugin.json`); the skills are maintained in the tok repository (`skills/tok-modelling`, `skills/bpmn-modelling`) and copied here with `tools/sync.sh`. Report problems in https://github.com/tok-lang-bpm/tok/issues.
 
 ## Licence
 
