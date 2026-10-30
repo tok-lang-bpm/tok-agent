@@ -57,11 +57,13 @@ Details: [docs/mcp.md](https://github.com/tok-lang-bpm/tok/blob/main/docs/mcp.md
 
 ## Good practice
 
-A clean check means the model follows the rules of BPMN and of tok; it does not mean the model matches the real process. The skill has the agent write a mapping table (step of the description → element of the model) next to the model, so a person can review the decisions the agent took. Review the model and the diagram before you use them.
+A clean check means the model follows the rules of BPMN and of tok; it does not mean the model matches the real process. When the description is a numbered table of steps, or when you ask for a review of the choices, the skill has the agent write a mapping table (step of the description → element of the model) next to the model, so a person can review the decisions the agent took. Review the model and the diagram before you use them.
+
+The skill tells the agent to read the one-page cheat sheet once and nothing else before the first check, and to open the specification only for the section a diagnostic needs: every page an agent reads comes back with every later turn, and in the evidence study of tok the agents that read the whole reference first used three to five times the tokens of a plain prompt for the same validity.
 
 ## Versions and issues
 
-The plugin follows the version of tok (`plugins/tok/.claude-plugin/plugin.json`); the skills are maintained in the tok repository (`skills/tok-modelling`, `skills/bpmn-modelling`) and copied here with `tools/sync.sh`. Report problems in https://github.com/tok-lang-bpm/tok/issues.
+The plugin follows the version of tok (`plugins/tok/.claude-plugin/plugin.json`); when only the skills change between releases of tok, the plugin adds a fourth number (1.0.3.1 carries the skills revised after the third evidence study, with the programs of 1.0.3). The skills are maintained in the tok repository (`skills/tok-modelling`, `skills/bpmn-modelling`) and copied here with `tools/sync.sh`. Report problems in https://github.com/tok-lang-bpm/tok/issues.
 
 ## Licence
 
